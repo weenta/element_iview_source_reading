@@ -20,8 +20,22 @@ clickHandler(evt) {
 }
 ```
 
+- disabled
+props: disabled 或者     
+inject注入的elForms disabled      
+或者 loading
+[provide/inject](https://cn.vuejs.org/v2/api/#provide-inject)
+```js
+// 源码
+buttonDisabled() {
+  return this.disabled || (this.elForm || {}).disabled;
+}
+
+```
 
 ## todo
-button
+- msgbox
+- loading
 is-plain
 
+disabled plain button

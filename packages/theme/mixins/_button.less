@@ -1,5 +1,37 @@
 @import '../common/var.less';
 
+// plain-button
+.button-plain(@color) {
+  color: @color;
+  background: mix(@--color-white, @color, 90%);
+  border-color: mix(@--color-white, @color, 60%);
+
+  &:hover,
+  &:focus {
+    background: @color;
+    border-color: @color;
+    color: @--color-white;
+  }
+
+  &:active {
+    background: mix(@--color-black, @color, @--button-active-shade-percent);
+    border-color: mix(@--color-black, @color, @--button-active-shade-percent);
+    color: @--color-white;
+    outline: none;
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: mix(@--color-white, @color, 40%);
+      background-color: mix(@--color-white, @color, 90%);
+      border-color: mix(@--color-white, @color, 80%);
+    }
+  }
+}
+
 // button 不同type
 .button-variant(@color, @background-color, @border-color) {
   color: @color;
@@ -35,5 +67,9 @@
       background-color: mix(@background-color, @--color-white);
       border-color: mix(@border-color, @--color-white);
     }
+  }
+
+  &.is-plain {
+    .button-plain(@background-color);
   }
 }

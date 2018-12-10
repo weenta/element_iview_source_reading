@@ -43,7 +43,8 @@ module.exports = {
     "vue/max-attributes-per-line": ["off"],
     "vue/comment-directive": ["off"],
     "vue/require-prop-types": ["off"],
-    "vue/html-quotes": ["off"]
+    "vue/html-quotes": ["off"],
+    "vue/require-default-prop": ["off"]
   },
   "plugins": [
     "vue"

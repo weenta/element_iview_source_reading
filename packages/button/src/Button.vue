@@ -1,8 +1,13 @@
 <template>
   <button
     :type='type'
+    :disabled='disabled'
     :class="[
       type ? 'w-button--' + type : '',
+      {
+        'is-disabled': buttonDisabled,
+        'is-plain': plain
+      }
     ]"
     class="w-button"
     @click='clickHandler'>
@@ -17,8 +22,16 @@ export default {
       type: String,
       default: 'default'
     },
-
+    disabled: Boolean,
+    plain: Boolean,
   },
+
+  computed: {
+    buttonDisabled() {
+      return this.disabled
+    }
+  },
+
   methods: {
     clickHandler(evt) {
       this.$emit('click',evt)
