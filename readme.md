@@ -34,8 +34,6 @@ buttonDisabled() {
 ```
 
 ## todo
-- msgbox
 - loading
-is-plain
 
-disabled plain button
+messageBox
