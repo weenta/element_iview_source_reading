@@ -1,0 +1,24 @@
+@import './common/var.less';
+
+.w-notification {
+  display: flex;
+  width: @--notification-width;
+  padding: @--notification-padding;
+  border-radius: @--notification-radius;
+  box-sizing: border-box;
+  border: 1px solid @--notification-border-color;
+  position: fixed;
+  background-color: @--color-white;
+  box-shadow: @--notification-shadow;
+  transition: opacity .3s, transform .3s, left .3s, right .3s, top 0.4s, bottom .3s;
+  overflow: hidden;
+
+  &.right {
+    right: 16px;
+  }
+
+  &.left {
+    left: 16px;
+  }
+
+}

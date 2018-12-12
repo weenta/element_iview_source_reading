@@ -33,7 +33,17 @@ buttonDisabled() {
 
 ```
 
+#### WNotification
+- 全局api 
+```js
+  // https://cn.vuejs.org/v2/api/#Vue-extend
+  Vue.extend(options)
+
+```
+
+
+
 ## todo
 - loading
 
-messageBox
+Notification

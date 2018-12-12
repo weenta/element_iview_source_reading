@@ -4,7 +4,6 @@
 -------------------------- */
 @--color-white: #fff;
 @--color-black: #000;
-
 @--color-primary: #409EFF;
 @--color-primary-light-1: mix(@--color-white, @--color-primary, 10%); /* 53a8ff */
 @--color-primary-light-2: mix(@--color-white, @--color-primary, 20%); /* 66b1ff */
@@ -35,6 +34,13 @@
 @--color-text-regular: #606266;
 @--color-text-secondary: #909399;
 @--color-text-placeholder: #c0c4cc;
+
+
+/* Box-shadow
+-------------------------- */
+@--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+@--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12);
+@--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
 /* Font
 -------------------------- */
@@ -122,8 +128,46 @@
 @--button-disabled-fill: @--color-white;
 @--button-disabled-border: @--border-color-lighter;
 
-
 @--button-hover-tint-percent: 20%;
 @--button-active-shade-percent: 10%;
 
 
+/* Message
+-------------------------- */
+@--message-shadow: @--box-shadow-base;
+@--message-min-width: 380px;
+@--message-background-color: #edf2fc;
+@--message-padding: 15px 15px 15px 20px;
+@--message-content-color: @--color-text-regular;
+@--message-close-color: @--color-text-placeholder;
+@--message-close-size: 16px;
+@--message-close-hover-color: @--color-text-secondary;
+
+@--message-success-color: @--color-success;
+@--message-info-color: @--color-info;
+@--message-warning-color: @--color-warning;
+@--message-danger-color: @--color-danger;
+
+
+/* Notification
+-------------------------- */
+@--notification-width: 330px;
+@--notification-padding: 14px 26px 14px 13px;
+@--notification-radius: 8px;
+@--notification-shadow: @--box-shadow-light;
+@--notification-border-color: @--border-color-lighter;
+@--notification-icon-size: 24px;
+@--notification-close-font-size: @--message-close-size;
+@--notification-group-margin: 13px;
+@--notification-font-size: @--font-size-base;
+@--notification-color: @--color-text-regular;
+@--notification-title-font-size: 16px;
+@--notification-title-color: @--color-text-primary;
+
+@--notification-close-color: @--color-text-secondary;
+@--notification-close-hover-color: @--color-text-regular;
+
+@--notification-success-color: @--color-success;
+@--notification-info-color: @--color-info;
+@--notification-warning-color: @--color-warning;
+@--notification-danger-color: @--color-danger;

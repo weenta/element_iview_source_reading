@@ -11,6 +11,10 @@ export default {
         {
           name: 'button',
           path: '/testbutton'
+        },
+        {
+          name: 'notification',
+          path: '/testnotification'
         }
       ]
     }
