@@ -21,4 +21,78 @@
     left: 16px;
   }
 
+  &-btn-close {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    cursor: pointer;
+    color: @--notification-close-color;
+    font-size: @--notification-close-font-size;
+
+    &:hover {
+      color: @--notification-close-hover-color;
+    }
+  }
+
+  &-title {
+    font-weight: bold;
+    font-size: @--notification-title-font-size;
+    color: @--notification-title-color;
+    margin: 0;
+  }
+
+  &-content {
+    font-size: @--notification-font-size;
+    line-height: 21px;
+    color: @--notification-color;
+    text-align: justify;
+
+    &.is-with-icon {
+      margin-left: 13px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .el-notification__icon {
+    height: @--notification-icon-size;
+    width: @--notification-icon-size;
+    font-size: @--notification-icon-size;
+  }
+  
+
+  .el-icon-success {
+    color: @--notification-success-color;
+  }
+
+  .el-icon-error {
+    color: @--notification-danger-color;
+  }
+
+  .el-icon-info {
+    color: @--notification-info-color;
+  }
+
+  .el-icon-warning {
+    color: @--notification-warning-color;
+  }
+
 }
+
+.el-notification-fade-enter {
+  &.right {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &.left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.el-notification-fade-leave-active {
+  opacity: 0;
+}
+
