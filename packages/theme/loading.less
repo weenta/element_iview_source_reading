@@ -1,0 +1,55 @@
+@import './common/var.less';
+
+.w-loading {
+  position: absolute;
+  z-index: 2000;
+  background-color: rgba(255, 255, 255, .9);
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity .3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .icon-spinner-rotate {
+    display: inline-block;
+    animation: loading-rotate .7s linear infinite;
+    color: @--color-primary;
+    font-size: 1.5em;
+  }
+}
+
+.el-loading-fade-enter,
+.el-loading-fade-leave-active {
+  opacity: 0;
+}
+
+// 父元素设置position relative
+.w-loading-parent--relative {
+  position: relative !important;
+}
+
+@keyframes loading-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40px;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120px;
+  }
+}

@@ -34,6 +34,7 @@ buttonDisabled() {
 ```
 
 #### WNotification
+> document.body插入子元素，动画结束后销毁实例
 - 全局api 
 ```js
   // https://cn.vuejs.org/v2/api/#Vue-extend
@@ -86,10 +87,16 @@ https://cn.vuejs.org/v2/guide/transitions.html#%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94
 
 ```
 
+#### WLoading
+> 插入子元素后并不销毁，而是设置`display:none`
 
-
+- 全局api`Vue.extend( options )`
+- 全局api `Vue.directive( id, [definition] )`
+- 全局api `Vue.nextTick( [callback, context] )`
+- transition事件 `after-leave`
+- 实例事件 `vm.$on( event, callback)` `vm.$once( event, callback)`
 
 ## todo
-- loading
+- table 表格
 
-
+popover

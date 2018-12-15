@@ -15,6 +15,10 @@ export default {
         {
           name: 'notification',
           path: '/testnotification'
+        },
+        {
+          name: 'loading',
+          path: '/testloading'
         }
       ]
     }

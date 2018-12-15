@@ -1,22 +1,11 @@
-// var new_array = arr.filter(callback(element[, index[, array]])[, thisArg])
-var index = -1
-var num = 5
-var arr = []
-for (let i = 0;i < 10;i++) {
-  let obj = {
-    id: i + 1,
-    name: 'obj_' + (i + 1)
-  }
-  arr.push(obj)
-}
-console.log('开始调试')
-var target = arr.filter((e,i)=>{
-  if (e.id === num) {
-    index = i
-    
-    return true
-  }
-  return false
-})
-console.log(target)
+const SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g
+const MOZ_HACK_REGEXP = /^moz([A-Z])/
 
+const camelCase = function(name) {
+  return name.replace(SPECIAL_CHARS_REGEXP, function(_, separator, letter, offset) {
+    return offset ? letter.toUpperCase() : letter
+  }).replace(MOZ_HACK_REGEXP, 'Moz$1')
+}
+
+var result = camelCase('font_size')
+console.log(result)
