@@ -2,8 +2,8 @@
   <div class="test-loading">
     <w-button @click="toggleLoading">v-loading={{ loading }}</w-button>
     <div v-loading="loading" class="box1">box1</div>
-    <div v-loading="loading" class="box2">box2</div>
-    <div v-loading="loading" class="box3">box3</div>
+    <div v-loading="loading" class="box2">box2 position: absolute</div>
+    <div v-loading="loading" class="box3">box3 position: fixed</div>
     <w-button v-loading='loading' >button loading</w-button>
     <w-button v-loading='loading' type='success'>button loading</w-button>
     <w-button v-loading='loading' type='danger'>button loading</w-button>
