@@ -95,7 +95,18 @@ https://cn.vuejs.org/v2/guide/transitions.html#%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94
 - transition事件 `after-leave`
 - 实例事件 `vm.$on( event, callback)` `vm.$once( event, callback)`
 
+#### WToolTip
+- 使用render函数 
+> Vue 推荐在绝大多数情况下使用 template 来创建你的 HTML。然而在一些场景中，你真的需要 JavaScript 的完全编程的能力，这时你可以用 render 函数，它比 template 更接近编译器。
+
+- 直接渲染 ，and set default display:none 
+
 ## todo
 - table 表格
 
+- toolTips
+使用render函数
+
 popover
+
+

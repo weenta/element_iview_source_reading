@@ -1,5 +1,6 @@
 <template>
   <ul class="home">
+    <!-- eslint-disable-next-line -->
     <li v-for='(item,idx) in componentItems' :key="idx" class="home-item" @click="jump(item.path)">{{ item.name }}</li>
   </ul>
 </template>
@@ -7,6 +8,7 @@
 export default {
   data() {
     return {
+      
       componentItems: [
         {
           name: 'button',
@@ -19,7 +21,19 @@ export default {
         {
           name: 'loading',
           path: '/testloading'
-        }
+        },
+        {
+          name: 'popover',
+          path: '/testpopover'
+        },
+        {
+          name: 'tool-tips',
+          path: '/testtips'
+        },
+        {
+          name: 'test-jsx',
+          path: '/testjsx'
+        },
       ]
     }
   },
@@ -33,7 +47,7 @@ export default {
 
 <style scoped>
 .home-item {
-  margin: 5px 0;
+  padding: 5px 0;
   cursor: pointer;
 }
 </style>

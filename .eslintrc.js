@@ -14,7 +14,9 @@ module.exports = {
     "sourceType": "module"
   },
   "rules": {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
@@ -22,10 +24,17 @@ module.exports = {
     "no-mixed-spaces-and-tabs": ["error"],
     "constructor-super": ["error"],
     "no-this-before-super": ["error"],
-    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-multiple-empty-lines": ["error", {
+      "max": 1
+    }],
     "block-spacing": ["error", "always"],
-    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
-    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "no-multi-spaces": ["error", {
+      "ignoreEOLComments": true
+    }],
+    "keyword-spacing": ["error", {
+      "before": true,
+      "after": true
+    }],
     "space-infix-ops": ["error"],
     "key-spacing": ["error"],
     "constructor-super": ["error"],
