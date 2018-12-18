@@ -16,7 +16,6 @@
       <w-button @click='notifyInfo'>notification Info</w-button>
     </li>
     <br>
-   
   </ul>
 </template>
 <script>

@@ -15,7 +15,9 @@ export default {
   render() {
     return (
       <div class="test" onClick={ this.onClick }>
-        <w-button>from jsx</w-button>
+        <w-popover content='hello'>
+          <w-button slot='reference' style='margin:100px;'>greeting from jsx</w-button>
+        </w-popover>
       </div>
     )
   },

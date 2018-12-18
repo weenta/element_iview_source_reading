@@ -6,6 +6,7 @@ import TestNotification from './components/TestNotification'
 import TestLoading from './components/TestLoading'
 import TestTips from './components/TestTips'
 import TestJsx from './components/TestJsx'
+import TestPopoverNative from './components/TestPopoverNative'
 import TestPopover from './components/TestPopover'
 
 Vue.use(Router)
@@ -18,6 +19,7 @@ export default new Router({
     { path: '/testloading', name: 'Loading', component: TestLoading },
     { path: '/testtips', name: 'ToolTips', component: TestTips },
     { path: '/testjsx', name: 'TestJsx', component: TestJsx },
+    { path: '/testpopovernative', name: TestPopoverNative.name, component: TestPopoverNative },
     { path: '/testpopover', name: TestPopover.name, component: TestPopover },
   ]
 })

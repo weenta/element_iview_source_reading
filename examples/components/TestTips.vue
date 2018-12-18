@@ -1,7 +1,7 @@
 <template>
   <div class="test-tips">
     <w-tooltip :title='title'>
-      <w-button type='primary'>上方</w-button>
+      <span>not finished yet</span>
     </w-tooltip>
   </div>
 </template>

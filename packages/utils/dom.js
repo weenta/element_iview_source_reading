@@ -3,6 +3,7 @@ import Vue from 'vue'
 /* eslint-disable-next-line */
 const SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g
 const MOZ_HACK_REGEXP = /^moz([A-Z])/
+const root = window
 
 // 转换驼峰法 font-size => fontSize
 const camelCase = function(name) {
@@ -78,4 +79,79 @@ export function removeClass(el, cls) {
 
 const trim = function(string) {
   return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '')
+}
+
+// 计算popover位置
+export function calculatePosition(element) {
+  let positionAttr = getPosition(element)
+  let offsetParent = getOffsetParent(element)
+  let pos
+  if (positionAttr === 'fixed' && offsetParent !== document.body) {
+    let eleRect = getRect(element)
+    let parentRect = getRect(offsetParent)
+    pos = Object.assign({},parentRect)
+    pos.left = eleRect.left - eleRect.width / 2
+    pos.top = pos.top + eleRect.top
+  } else {
+    pos = getRect(element)
+  }
+  pos.position = positionAttr
+  return pos
+}
+
+// 获取css position属性信息 fixed or absolute
+const getPosition = function(element) {
+  var isParentFixed = isFixed(element)
+  return isParentFixed ? 'fixed' : 'absolute'
+}
+
+// 判断元素是否position: fixed
+const isFixed = function(element) {
+  if (element === root.document.body) {
+    return false
+  }
+  if (getStyleComputedProperty(element, 'position') === 'fixed') {
+    return true
+  }
+  // 如果有父元素 继续判断
+  return element.parentNode ? isFixed(element.parentNode) : element
+}
+
+const getOffsetParent = function(element) {
+  var offsetParent = element.offsetParent
+  return offsetParent === root.document.body || !offsetParent ? root.document.body : offsetParent
+}
+
+const getStyleComputedProperty = function(element, property) {
+  var css = root.getComputedStyle(element, null)
+  return css[property]
+}
+
+// 获取popover内元素的位置信息
+export function getRect(element) {
+  var rect = {
+    width: element.offsetWidth,
+    height: element.offsetHeight,
+    left: element.offsetLeft,
+    top: element.offsetTop
+  }
+  return rect
+}
+
+// 获取element的width height
+// v-show动画完成前，getRect返回 0 0 0 0的情况下使用
+export function getOuterSizes(element) {
+  // NOTE: 1 DOM access here
+  var _display = element.style.display, _visibility = element.style.visibility
+  element.style.display = 'block'; element.style.visibility = 'hidden'
+
+  // original method
+  var styles = root.getComputedStyle(element)
+  var x = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom)
+  var y = parseFloat(styles.marginLeft) + parseFloat(styles.marginRight)
+  var result = { width: element.offsetWidth + y, height: element.offsetHeight + x }
+
+  // reset element styles
+  element.style.display = _display; element.style.visibility = _visibility
+  return result
 }

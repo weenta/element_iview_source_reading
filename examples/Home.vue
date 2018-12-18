@@ -23,17 +23,22 @@ export default {
           path: '/testloading'
         },
         {
-          name: 'popover',
-          path: '/testpopover'
+          name: 'test-jsx',
+          path: '/testjsx'
         },
         {
           name: 'tool-tips',
           path: '/testtips'
         },
         {
-          name: 'test-jsx',
-          path: '/testjsx'
+          name: 'popover-native',
+          path: '/testpopovernative'
         },
+        {
+          name: 'popover',
+          path: '/testpopover'
+        },
+        
       ]
     }
   },

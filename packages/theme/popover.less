@@ -1,0 +1,39 @@
+@import './common/var.less';
+@import './common/transition.less';
+
+.w-popover {
+  min-width: 150px;
+  background: #abcdef;
+  visibility: hidden;
+  position: absolute;
+  padding: @--popover-padding;
+  background: @--popover-fill;
+  box-shadow: @--box-shadow-light;
+  border-radius: 4px;
+  border: 1px solid @--popover-border-color;
+  text-align: justify;
+  line-height: 1.4;
+  font-size: @--popover-font-size;
+  z-index: 2000;
+
+  &::after {
+      content: ' ';
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      margin-left: -6px;
+      box-sizing: border-box;
+      filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.3));
+      border-width:6px; 
+      border-style: solid;
+      border-color: transparent;
+      border-top-color: #fff;
+  }
+}
+
+

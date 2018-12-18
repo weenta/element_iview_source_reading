@@ -98,15 +98,16 @@ https://cn.vuejs.org/v2/guide/transitions.html#%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94
 #### WToolTip
 - 使用render函数 
 > Vue 推荐在绝大多数情况下使用 template 来创建你的 HTML。然而在一些场景中，你真的需要 JavaScript 的完全编程的能力，这时你可以用 render 函数，它比 template 更接近编译器。
+- TODO 
 
-- 直接渲染 ，and set default display:none 
+#### WPopover
+- `element.offsetParent`只读，返回一个指向最近的包含该元素的定位元素（position不为static）
+- `element.offsetXxx`在transition动画完成前无法取值，使用`window.getComputedStyle(element)`替代获取宽高
+- TODO container fixed情况下 设置container padding/margin值 导致错位
+
 
 ## todo
 - table 表格
 
-- toolTips
-使用render函数
-
-popover
-
+ pagination
 
