@@ -55,7 +55,7 @@ export default {
   mounted() {
     this.outsideSize = getOuterSizes(this.$refs.popover)
     this.addReference()
-    window.addEventListener('click',this.clickHandler)
+    
   },
   
   methods: {
@@ -75,6 +75,7 @@ export default {
         case 'click':
           elm.addEventListener('click',this.togglePopover)
           window.addEventListener('keydown',this.keydownHandler)
+          window.addEventListener('click',this.clickHandler)
           break
       }
      
