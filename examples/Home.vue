@@ -38,6 +38,10 @@ export default {
           name: 'popover',
           path: '/testpopover'
         },
+        {
+          name: 'pagenation',
+          path: '/testpagination'
+        },
         
       ]
     }

@@ -1,0 +1,36 @@
+@import './common/var.less';
+
+.w-pager {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  list-style-type:none;
+  margin: 0;
+  padding: 5px;
+  background: #fff;
+  
+
+  &>li {
+    font-size: @--pagination-font-size;
+    color: @--pagination-color;
+    cursor: pointer;
+    padding: 0 8px;
+    font-weight: bold;
+    user-select: none;
+
+    &:hover {
+      color: @--pagination-hover-fill;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      color: @--pagination-button-disabled-color
+    }
+
+    &.current-page {
+      color: @--pagination-hover-fill;
+    }
+  }
+ 
+}

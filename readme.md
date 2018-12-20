@@ -105,9 +105,9 @@ https://cn.vuejs.org/v2/guide/transitions.html#%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94
 - `element.offsetXxx`在transition动画完成前无法取值，使用`window.getComputedStyle(element)`替代获取宽高
 - TODO container fixed情况下 设置container padding/margin值 导致错位
 
+#### Wpagenation
 
 ## todo
 - table 表格
 
- pagination
 

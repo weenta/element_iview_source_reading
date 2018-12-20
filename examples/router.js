@@ -8,6 +8,7 @@ import TestTips from './components/TestTips'
 import TestJsx from './components/TestJsx'
 import TestPopoverNative from './components/TestPopoverNative'
 import TestPopover from './components/TestPopover'
+import TestPagination from './components/TestPagination'
 
 Vue.use(Router)
 
@@ -21,5 +22,6 @@ export default new Router({
     { path: '/testjsx', name: 'TestJsx', component: TestJsx },
     { path: '/testpopovernative', name: TestPopoverNative.name, component: TestPopoverNative },
     { path: '/testpopover', name: TestPopover.name, component: TestPopover },
+    { path: '/testpagination', name: TestPagination.name, component: TestPagination },
   ]
 })
