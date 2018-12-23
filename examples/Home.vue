@@ -43,6 +43,11 @@ export default {
           path: '/testpagination'
         },
         
+        {
+          name: 'table',
+          path: '/testtable'
+        },
+        
       ]
     }
   },

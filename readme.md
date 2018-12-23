@@ -105,9 +105,63 @@ https://cn.vuejs.org/v2/guide/transitions.html#%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94
 - `element.offsetXxx`在transition动画完成前无法取值，使用`window.getComputedStyle(element)`替代获取宽高
 - TODO container fixed情况下 设置container padding/margin值 导致错位
 
-#### Wpagenation
+#### WPagenation
 
+#### WTable
+- `<thead>` defines a set of rows defining the head of the columns of the table
+- `<tr>` defines a row of cells in a table.
+- `<th>` defines a cell as header of a group of table cells.
+- `<td>` defines a cell of a table that contains data
+- `hasOwnProperty` 只检测实例属性, `in` 检测实例属性和原型属性
+- `this._l` `Vue.prototype._l = renderList`
+```js
+/**
+ * Runtime helper for rendering v-for lists.
+ */
+function renderList (val,render) {
+  var ret, i, l, keys, key;
+  if (Array.isArray(val) || typeof val === 'string') {
+    ret = new Array(val.length);
+    for (i = 0, l = val.length; i < l; i++) {
+      ret[i] = render(val[i], i);
+    }
+  } else if (typeof val === 'number') {
+    ret = new Array(val);
+    for (i = 0; i < val; i++) {
+      ret[i] = render(i + 1, i);
+    }
+  } else if (isObject(val)) {
+    keys = Object.keys(val);
+    ret = new Array(keys.length);
+    for (i = 0, l = keys.length; i < l; i++) {
+      key = keys[i];
+      ret[i] = render(val[key], key, i);
+    }
+  }
+  if (isDef(ret)) {
+    (ret)._isVList = true;
+  }
+  return ret
+}
+
+```
+- `vm.$scopedSlots`
+> 用来访问作用域插槽。对于包括 默认 slot 在内的每一个插槽，该对象都包含一个返回相应 VNode 的函数。    
+> vm.$scopedSlots 在使用渲染函数开发一个组件时特别有用。
+- `vm.$parent` 父实例，如果当前实例有的话
+- `vm.$watch( expOrFn, callback, [options] )`
+```js
+// immediate
+// 在选项参数中指定 immediate: true 将立即以表达式的当前值触发回调：
+vm.$watch('a', callback, {
+  immediate: true
+})
+// 立即以 `a` 的当前值触发回调
+
+```
 ## todo
-- table 表格
+- table表格td参数超出显示省略号 通过内p标签进行设置
+template嵌套
 
+https://segmentfault.com/a/1190000015756225
 

@@ -1,0 +1,41 @@
+@import './common/var.less';
+
+.w-table {
+  font-size: 14px;
+  position: relative;
+  box-sizing: border-box;
+  color: @--table-text-color;
+  background-color: @--color-white;
+  width: 100%;
+  overflow-x: scroll;
+
+
+  table {
+    min-width: 100%;
+    table-layout: fixed;
+    word-break:break-all;
+    text-overflow: ellipsis;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+
+  thead {
+    color: @--table-header-color;
+
+    th {
+      font-weight: 500;
+    }
+  }
+
+  th,
+  td {
+    padding: 12px 10px;
+    min-width: 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+    position: relative;
+    border-bottom: @--table-border;
+  }
+
+}

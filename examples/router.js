@@ -9,6 +9,7 @@ import TestJsx from './components/TestJsx'
 import TestPopoverNative from './components/TestPopoverNative'
 import TestPopover from './components/TestPopover'
 import TestPagination from './components/TestPagination'
+import TestTable from './components/TestTable'
 
 Vue.use(Router)
 
@@ -23,5 +24,6 @@ export default new Router({
     { path: '/testpopovernative', name: TestPopoverNative.name, component: TestPopoverNative },
     { path: '/testpopover', name: TestPopover.name, component: TestPopover },
     { path: '/testpagination', name: TestPagination.name, component: TestPagination },
+    { path: '/testtable', name: 'Table', component: TestTable},
   ]
 })
