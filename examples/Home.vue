@@ -47,6 +47,10 @@ export default {
           name: 'table',
           path: '/testtable'
         },
+        {
+          name: 'table2',
+          path: '/testtable2'
+        },
         
       ]
     }

@@ -7,11 +7,9 @@ import Pagination from '../packages/pagination/index'
 import WTable from '../packages/table/index'
 import WTableColumn from '../packages/table-column/index'
 
-// ====== source-code ==============
-import ElTable from '../packages-s/table/index'
-import ElTableColumn from '../packages-s/table-column/index'
-
-// ======== source-code end ===========
+// table2
+import Table from '../packages/table2'
+import TableColumn from '../packages/table-column2'
 
 const install = function (Vue) {
   Vue.component(Button.name, Button)
@@ -21,15 +19,15 @@ const install = function (Vue) {
   Vue.component(Pagination.name,Pagination)
   Vue.component(WTable.name,WTable)
   Vue.component(WTableColumn.name,WTableColumn)
+
+  // table2
+  Vue.component(Table.name,Table)
+  Vue.component(TableColumn.name,TableColumn)
   
   Vue.use(Loading)
 
   Vue.prototype.$notify = Notification
 
-  // ======== source-code ========
-  Vue.component(ElTable.name,ElTable)
-  Vue.component(ElTableColumn.name,ElTableColumn)
-  // ======== source-code end ======
 }
 
 export default install

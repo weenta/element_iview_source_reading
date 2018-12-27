@@ -1,5 +1,16 @@
 
 <script>
+import { getPropByPath } from '../../utils/util'
+
+const DEFAULT_RENDER_CELL = function(h, { row, column, $index }) {
+  const property = column.property
+  const value = property && getPropByPath(row, property).v
+  if (column && column.formatter) {
+    return column.formatter(row, column, value, $index)
+  }
+  return value
+}
+
 const parseWidth = (width) => {
   if (width !== undefined) {
     width = parseInt(width, 10)
@@ -53,8 +64,10 @@ export default {
   created() {
     // render函数
     this.$options.render = h => h('div', this.$slots.default)
-    console.log(this.$scopedSlots.default)
 
+  },
+  mounted() {
+   
     let column = {
       label: this.label,
       property: this.prop || this.property,
@@ -63,8 +76,16 @@ export default {
     }
     this.columnConfig = column
 
-  },
-  mounted() {
+    var self = this
+    column.renderCell = function(h,data) {
+      let renderCell = DEFAULT_RENDER_CELL
+      if (self.$scopedSlots.default) {
+        renderCell = ()=>{ self.$scopedSlots.default(data) }
+        console.log('span')
+      }
+      return renderCell(h,data)
+    }
+
     let columnIndex
     this.owner.store.commit('insertColumn', this.columnConfig, columnIndex, null)
   }

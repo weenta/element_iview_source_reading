@@ -25,30 +25,30 @@ export default {
           gender: 'male',
           phone: '13900000000'
         },
-        {
-          name: 'Jhon',
-          age: 23,
-          gender: 'male',
-          phone: '13966666666'
-        },
-        {
-          name: 'Lucy',
-          age: 22,
-          gender: 'female',
-          phone: '13922222222'
-        },
-        {
-          name: 'Dasy',
-          age: 24,
-          gender: 'female',
-          phone: '13955555555'
-        },
-        {
-          name: 'Jane',
-          age: 24,
-          gender: 'female',
-          phone: '13955555555'
-        },
+        // {
+        //   name: 'Jhon',
+        //   age: 23,
+        //   gender: 'male',
+        //   phone: '13966666666'
+        // },
+        // {
+        //   name: 'Lucy',
+        //   age: 22,
+        //   gender: 'female',
+        //   phone: '13922222222'
+        // },
+        // {
+        //   name: 'Dasy',
+        //   age: 24,
+        //   gender: 'female',
+        //   phone: '13955555555'
+        // },
+        // {
+        //   name: 'Jane',
+        //   age: 24,
+        //   gender: 'female',
+        //   phone: '13955555555'
+        // },
       ]
     }
   }
