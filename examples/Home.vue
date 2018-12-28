@@ -51,6 +51,10 @@ export default {
           name: 'table2',
           path: '/testtable2'
         },
+        {
+          name: 'messageBox',
+          path: '/testmessagebox'
+        },
         
       ]
     }

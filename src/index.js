@@ -6,6 +6,7 @@ import Popover from '../packages/popover/index'
 import Pagination from '../packages/pagination/index'
 import WTable from '../packages/table/index'
 import WTableColumn from '../packages/table-column/index'
+import WMessageBox from '../packages/message-box/index'
 
 // table2
 import Table from '../packages/table2'
@@ -13,7 +14,6 @@ import TableColumn from '../packages/table-column2'
 
 const install = function (Vue) {
   Vue.component(Button.name, Button)
-  Vue.component(Notification.name, Notification)
   Vue.component(ToolTips.name,ToolTips)
   Vue.component(Popover.name,Popover)
   Vue.component(Pagination.name,Pagination)
@@ -26,7 +26,8 @@ const install = function (Vue) {
   
   Vue.use(Loading)
 
-  Vue.prototype.$notify = Notification
+  Vue.prototype.$notify = Notification 
+  Vue.prototype.$confirm = WMessageBox.confirm
 
 }
 

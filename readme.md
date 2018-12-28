@@ -70,7 +70,7 @@ buttonDisabled() {
 > 完全销毁一个实例。清理它与其它实例的连接，解绑它的全部指令及事件监听器。
 
 
-- 事件监听器-动画监听`transitionend`
+- 事件监听器-动画监听`transitionend` `animationend`
 > Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可以是 transitionend 或 animationend ，这取决于给元素应用的 CSS 规则。如果你使用其中任何一种，Vue 能自动识别类型并设置监听;
 https://cn.vuejs.org/v2/guide/transitions.html#%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E8%BF%87%E6%B8%A1%E5%92%8C%E5%8A%A8%E7%94%BB
 ```js
@@ -83,6 +83,9 @@ https://cn.vuejs.org/v2/guide/transitions.html#%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94
     this.$destroy(true)
     this.$el.parentNode.removeChild(this.$el)
   },
+
+  // transition ->添加transitionend监听
+  // animation -> 添加animationend监听
 
 ```
 
@@ -129,6 +132,13 @@ vm.$watch('a', callback, {
 // 立即以 `a` 的当前值触发回调
 
 ```
-## todo
+
+#### WMessageBox
+- 实例方法 `vm.$mount()`
+
+
+
+## TODO
+messageBox
 
 

@@ -11,6 +11,7 @@ import TestPopover from './components/TestPopover'
 import TestPagination from './components/TestPagination'
 import TestTable from './components/TestTable'
 import TestTable2 from './components/TestTable2'
+import TestMessageBox from './components/TestMessageBox'
 
 Vue.use(Router)
 
@@ -27,5 +28,6 @@ export default new Router({
     { path: '/testpagination', name: TestPagination.name, component: TestPagination },
     { path: '/testtable', name: 'Table', component: TestTable},
     { path: '/testtable2', name: 'Table2', component: TestTable2},
+    { path: '/testmessagebox', name: 'MessageBox', component: TestMessageBox},
   ]
 })
