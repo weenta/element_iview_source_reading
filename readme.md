@@ -135,10 +135,9 @@ vm.$watch('a', callback, {
 
 #### WMessageBox
 - 实例方法 `vm.$mount()`
-
-
+- 事件监听器-动画监听`transitionend` `animationend`
 
 ## TODO
-messageBox
+
 
 
