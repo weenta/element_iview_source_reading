@@ -77,7 +77,10 @@ export default {
   },
   methods: {
     checkHanlder(row) {
-      console.log(row.name)
+      this.$notify({
+        title: 'default',
+        message: row.name
+      })
     }
   }
 }
