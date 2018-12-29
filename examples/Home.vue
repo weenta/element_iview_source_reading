@@ -59,6 +59,10 @@ export default {
           name: 'switch',
           path: '/testswitch'
         },
+        {
+          name: 'radio',
+          path: '/testradio'
+        },
         
       ]
     }

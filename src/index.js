@@ -8,6 +8,7 @@ import WTable from '../packages/table/index'
 import WTableColumn from '../packages/table-column/index'
 import WMessageBox from '../packages/message-box/index'
 import WSwitch from '../packages/switch/index'
+import WRadio from '../packages/radio/index'
 
 // table2
 import Table from '../packages/table2'
@@ -21,6 +22,7 @@ const install = function (Vue) {
   Vue.component(WTable.name,WTable)
   Vue.component(WTableColumn.name,WTableColumn)
   Vue.component(WSwitch.name,WSwitch)
+  Vue.component(WRadio.name,WRadio)
 
   // table2
   Vue.component(Table.name,Table)
