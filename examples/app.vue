@@ -20,6 +20,8 @@ h2 {
 }
 #app {
   background: #f1f1f1;
+  padding-bottom: 100px;
+  padding-left: 10px;
 }
 </style>
 

@@ -137,7 +137,16 @@ vm.$watch('a', callback, {
 - 实例方法 `vm.$mount()`
 - 事件监听器-动画监听`transitionend` `animationend`
 
-## TODO
+#### WSwitch
+- `<input type='checkBox'/>`
 
+- 选项 `model`    
+允许一个自定义组件在使用 `v-model` 时定制 prop 和 event;    
+https://cn.vuejs.org/v2/api/#model      
+
+- 自定义组件的 `v-model` 
+https://cn.vuejs.org/v2/guide/components-custom-events.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84-v-model
+
+## TODO
 
 

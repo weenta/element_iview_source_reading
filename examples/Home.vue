@@ -55,6 +55,10 @@ export default {
           name: 'messageBox',
           path: '/testmessagebox'
         },
+        {
+          name: 'switch',
+          path: '/testswitch'
+        },
         
       ]
     }
