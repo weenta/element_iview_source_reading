@@ -162,6 +162,20 @@ computed: {
   }
 }
 ```
+- TODO user-select: none;
 
+#### WCheckBox
+- 实例属性`vm.$children`
+- `this.$children[0].$el.children[0].checked`   
+- `this.$parent.$options.name`
+```js
+// dispatch changes
+let parent = this.$parent
+parent.$emit.apply(parent, ['input'].concat([newVal]))
+
+```
 ## TODO
+checkboxgroup 样式
+label不可选中
 
+checkboxGroup源码调试

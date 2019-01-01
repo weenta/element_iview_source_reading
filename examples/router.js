@@ -14,6 +14,8 @@ import TestTable2 from './components/TestTable2'
 import TestMessageBox from './components/TestMessageBox'
 import TestSwitch from './components/TestSwitch'
 import TestRadio from './components/TestRadio'
+import TestCheckBox from './components/TestCheckBox'
+import TestCheckBox2 from './components/TestCheckBox2'
 
 Vue.use(Router)
 
@@ -33,6 +35,8 @@ export default new Router({
     { path: '/testmessagebox', name: 'MessageBox', component: TestMessageBox},
     { path: '/testswitch', name: 'Switch', component: TestSwitch},
     { path: '/testradio', name: 'Radio', component: TestRadio},
+    { path: '/testcheckbox', name: 'Checkbox', component: TestCheckBox },
+    { path: '/testcheckbox2', name: 'Checkbox2', component: TestCheckBox2 },
     
   ]
 })

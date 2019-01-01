@@ -64,6 +64,15 @@ export default {
           path: '/testradio'
         },
         
+        {
+          name: 'checkbox',
+          path: '/testcheckbox'
+        },
+        {
+          name: 'checkbox2',
+          path: '/testcheckbox2'
+        },
+        
       ]
     }
   },

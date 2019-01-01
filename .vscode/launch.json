@@ -5,20 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "type": "chrome",
       "request": "launch",
-      "name": "nodemon",
-      "runtimeExecutable": "nodemon",
-      "program": "${workspaceFolder}/test/index.js",
-      "restart": true,
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "启动程序",
-      "program": "${workspaceFolder}/test/index.js"
-    }
+      "name": "Launch Chrome against localhost",
+      "url": "http://localhost:8081",
+      "webRoot": "${workspaceFolder}/packages",
+      "sourceMapPathOverrides": {
+          "webpack:///packages/*": "${webRoot}/*",
+      }
+  }
   ]
 }
