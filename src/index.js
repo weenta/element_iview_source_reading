@@ -11,6 +11,7 @@ import WSwitch from '../packages/switch/index'
 import WRadio from '../packages/radio/index'
 import WCheckBox from '../packages/checkbox/index'
 import WCheckBoxGroup from '../packages/checkbox-group/index'
+import WInput from '../packages/input'
 
 // table2
 import Table from '../packages/table2'
@@ -30,6 +31,7 @@ const install = function (Vue) {
   Vue.component(WRadio.name,WRadio)
   Vue.component(WCheckBox.name,WCheckBox)
   Vue.component(WCheckBoxGroup.name,WCheckBoxGroup)
+  Vue.component(WInput.name,WInput)
 
   // table2
   Vue.component(Table.name,Table)

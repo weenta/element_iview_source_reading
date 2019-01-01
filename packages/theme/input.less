@@ -1,0 +1,36 @@
+@import './common/var.less';
+
+.w-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  &--core {
+    display: inline-block;
+    width: 100%;
+    font-size: @--font-size-base;
+    line-height: 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    outline: none;
+    border: @--input-border;
+    border-radius: @--input-border-radius;
+    box-sizing: border-box;
+    padding: 0 15px;
+    height: @--input-small-height;
+    
+    &::placeholder {
+      color: @--input-placeholder-color;
+    }
+
+    &:hover {
+      border-color: @--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: @--input-focus-border;
+    }
+
+  }
+}

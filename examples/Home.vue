@@ -72,6 +72,10 @@ export default {
           name: 'checkbox2',
           path: '/testcheckbox2'
         },
+        {
+          name: 'input',
+          path: '/testinput'
+        },
         
       ]
     }
