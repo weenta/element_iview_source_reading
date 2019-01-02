@@ -76,6 +76,10 @@ export default {
           name: 'input',
           path: '/testinput'
         },
+        {
+          name: 'select',
+          path: '/testselect'
+        },
         
       ]
     }

@@ -4,12 +4,10 @@
   </div>
 </template>
 <script>
-import emtter from '../../utils/emitter'
 
 export default {
   name: 'TCheckboxGroup',
   componentName: 'TCheckboxGroup',
-  mixins: [emtter],
   props: {
     value: {},
   },

@@ -1,0 +1,117 @@
+@import './common/var.less';
+
+.w-select {
+  display: inline-block;
+  position: relative;
+  
+  &--input {
+    display: inline-block;
+    width: 100%;
+    font-size: @--font-size-base;
+    line-height: 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    outline: none;
+    border: @--input-border;
+    border-radius: @--input-border-radius;
+    box-sizing: border-box;
+    padding: 0 32px 0 15px;
+    height: @--input-small-height;
+
+    &::placeholder {
+      color: @--input-placeholder-color;
+    }
+
+    &:hover {
+      border-color: @--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: @--input-focus-border;
+    }
+  }
+
+  &--icon {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-right: @--border-base;
+    border-bottom: @--border-base;
+    transform: rotate(45deg);
+    transition: .3s;
+
+    &.is-focused {
+      transform: rotate(225deg);
+      top:13px;
+    }
+  }
+  .w-options-wrapper {
+    width: 100%;
+    height: auto;
+    border: @--select-dropdown-border;
+    background: @--select-dropdown-background;
+    max-height: @--select-dropdown-max-height;
+    box-shadow: @--select-dropdown-shadow;
+    padding: @--select-dropdown-padding;
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+    &::after {
+      content: ' ';
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      position: absolute;
+      top: -12px;
+      left: 22%;
+      margin-left: -6px;
+      box-sizing: border-box;
+      filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.3));
+      border-width:6px; 
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: #fff;
+  }
+  
+  }
+
+  &--option {
+    list-style: none;
+    font-size: @--select-font-size;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: @--select-option-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @--select-option-hover-background;
+    }
+
+    &.selected {
+      color: @--select-option-selected;
+      font-weight: bold;
+    }
+  }
+
+  .el-zoom-in-top-enter-active,
+  .el-zoom-in-top-leave-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: @--md-fade-transition;
+    transform-origin: center top;
+  }
+  .el-zoom-in-top-enter,
+  .el-zoom-in-top-leave-active {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}

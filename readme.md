@@ -179,4 +179,17 @@ computed: {
 #### WInput 
 - 使用`v-model`后不需要手动`emit('input',evt)`
 
+#### WSelect
+- 使用input 设置readonly属性 替代默认选框
+- `input :value=''``v-model=''`冲突
+- option disable
+- provide/inject
+https://cn.vuejs.org/v2/api/#provide-inject   
+> 这对选项需要一起使用，以允许一个祖先组件向其所有子孙后代注入一个依赖，不论组件层次有多深，并在起上下游关系成立的时间里始终生效;       
+> provide 和 inject 主要为高阶插件/组件库提供用例。并不推荐直接用于应用程序代码中。       
+- transition
+`@--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);`
+- TODO option disable
+
+
 ## TODO
