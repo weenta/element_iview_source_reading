@@ -15,6 +15,8 @@ import WInput from '../packages/input'
 import WSelect from '../packages/select'
 import WOption from '../packages/option'
 import WSlider from '../packages/slider'
+import WForm from '../packages/form'
+import WFormItem from '../packages/form-item'
 
 // table2
 import Table from '../packages/table2'
@@ -38,6 +40,8 @@ const install = function (Vue) {
   Vue.component(WSelect.name,WSelect)
   Vue.component(WOption.name,WOption)
   Vue.component(WSlider.name,WSlider)
+  Vue.component(WForm.name,WForm)
+  Vue.component(WFormItem.name,WFormItem)
 
   // table2
   Vue.component(Table.name,Table)

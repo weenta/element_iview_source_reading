@@ -80,10 +80,13 @@ export default {
           name: 'select',
           path: '/testselect'
         },
-        
         {
           name: 'slider',
           path: '/testslider'
+        },
+        {
+          name: 'form',
+          path: '/testform'
         },
         
       ]

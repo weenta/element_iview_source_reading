@@ -1,0 +1,54 @@
+@import './common/var.less';
+
+.w-form {
+  position: relative;
+
+  &--item {
+    margin-bottom: 18px;
+    line-height: 36px;
+
+    .form-item-label {
+      display: inline-block;
+      min-width: 80px;
+      text-align: left;
+      box-sizing: border-box;
+      padding-right: 10px;
+
+      i {
+        color: @--color-danger;
+        padding-right: 5px;
+      }
+    }
+
+    .form-item-content {
+      display: inline-block;
+      position: relative;
+
+      .form-item-invalidate-msg {
+        font-size: 12px;
+        position: absolute;
+        left: 0;
+        bottom: -14px;
+        color: @--color-danger;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        transition: all .2s;
+        
+      }
+    }
+  }
+}
+
+.el-zoom-in-top-enter-active,
+.el-zoom-in-top-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: @--md-fade-transition;
+  transform-origin: center top;
+}
+.el-zoom-in-top-enter,
+.el-zoom-in-top-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+}
