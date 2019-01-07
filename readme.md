@@ -191,5 +191,8 @@ https://cn.vuejs.org/v2/api/#provide-inject
 `@--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);`
 - TODO option disable
 
+#### WSlider
+- `element.getBoundingClientRect`
 
 ## TODO
+slider

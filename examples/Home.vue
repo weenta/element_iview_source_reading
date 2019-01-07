@@ -81,6 +81,11 @@ export default {
           path: '/testselect'
         },
         
+        {
+          name: 'slider',
+          path: '/testslider'
+        },
+        
       ]
     }
   },

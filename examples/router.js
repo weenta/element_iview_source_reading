@@ -18,6 +18,7 @@ import TestCheckBox from './components/TestCheckBox'
 import TestCheckBox2 from './components/TestCheckBox2'
 import TestInput from './components/TestInput'
 import TestSelect from './components/TestSelect'
+import TestSlider from './components/TestSlider'
 
 Vue.use(Router)
 
@@ -41,6 +42,7 @@ export default new Router({
     { path: '/testcheckbox2', name: 'Checkbox2', component: TestCheckBox2 },
     { path: '/testinput', name: 'Input', component: TestInput },
     { path: '/testselect', name: 'Select', component: TestSelect },
+    { path: '/testslider', name: 'Slider', component: TestSlider },
     
   ]
 })

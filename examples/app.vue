@@ -18,6 +18,7 @@ export default {
 h2 {
   text-align: center;
 }
+
 #app {
   background: #f1f1f1;
   padding-bottom: 100px;

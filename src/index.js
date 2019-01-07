@@ -14,6 +14,7 @@ import WCheckBoxGroup from '../packages/checkbox-group/index'
 import WInput from '../packages/input'
 import WSelect from '../packages/select'
 import WOption from '../packages/option'
+import WSlider from '../packages/slider'
 
 // table2
 import Table from '../packages/table2'
@@ -36,6 +37,7 @@ const install = function (Vue) {
   Vue.component(WInput.name,WInput)
   Vue.component(WSelect.name,WSelect)
   Vue.component(WOption.name,WOption)
+  Vue.component(WSlider.name,WSlider)
 
   // table2
   Vue.component(Table.name,Table)

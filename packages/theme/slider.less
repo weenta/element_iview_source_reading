@@ -1,0 +1,36 @@
+@import './common/var.less';
+
+.w-slider {
+  width: 100%;
+  height:@--slider-height;
+  background: @--slider-runway-background-color;
+  margin: @--slider-margin;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+
+  &--bar {
+    height: @--slider-height;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: @--slider-main-background-color;
+
+    &--button {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid @--color-primary;
+      position: absolute;
+      top: -7px;
+      right: -10px;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: all .2s;
+      }
+    }
+  }
+
+}
